@@ -18,6 +18,13 @@ const productos = [
   }
 ]
 
-// const getDatos = () => {
-    
-// }
+const getDatos = () => {
+  return new Promise( (resolve, reject) => {
+    setTimeout( () => {
+      resolve(productos)
+    }, 2000)
+  })
+}
+
+getDatos()
+	.then(res => console.log(res))
